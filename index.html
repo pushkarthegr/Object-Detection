@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Home Page</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+  <style>
+      .btn{
+          width:40%;
+          border-radius:20px;
+      }
+      body{
+          background-color:blue;
+      }
+      .line{
+          width:80%;
+          height:2px;
+          background-color:white;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+      h1{
+          color:aqua;
+      }
+  </style>
+    </head>
+    <body>
+        <center>
+        <h1>Object Detection</h1>
+        <div class="line"></div>
+        <button class="btn btn-success" onclick="animals()">Animals</button>
+        <br><br>
+        <button class="btn btn-danger"onclick="room()">Room</button>
+        <br><br>
+        <button class="btn btn-info"onclick="ships()">Ships</button>
+        <br><br>
+        <button class="btn btn-warning"onclick="cars()">Cars</button>
+        <div class="line"></div>
+        <button class="btn btn-dark" onclick="own()">Use your own Image</button>
+    </center>
+    <script>
+        function animals(){
+            localStorage.setItem("ImageType","Animals");
+            window.location = "image.html";
+        }
+        function room(){
+            localStorage.setItem("ImageType","Room");
+            window.location = "image.html";
+        }
+        function ships(){
+            localStorage.setItem("ImageType","Ships");
+            window.location = "image.html";
+        }
+        function cars(){
+            localStorage.setItem("ImageType","Cars");
+            window.location = "image.html";
+        }
+        function own(){
+            window.location = "own.html";
+        }
+    </script>
+    </body>
+</html>
